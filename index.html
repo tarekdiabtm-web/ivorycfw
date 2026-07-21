@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ivory CFW Roleplay | Premium FiveM City</title>
+  <meta name="description" content="Ivory Roleplay - مدينة رول بلاي احترافية داخل FiveM بتجربة فخمة وهوية مميزة.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="preloader" class="preloader">
+    <div class="preloader-orbit"></div>
+    <img src="assets/ivory-logo.png" alt="Ivory Logo">
+    <span>IVORY CFW</span>
+  </div>
+  <div id="pageTransition" class="page-transition">
+    <div class="preloader-orbit"></div>
+    <img src="assets/ivory-logo.png" alt="Ivory">
+    <span>IVORY CFW</span>
+  </div>
+
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div id="progress" class="progress"></div>
+  <canvas id="fx"></canvas>
+  <div id="spotlight" class="spotlight"></div>
+  <div class="grain"></div>
+
+  <header class="navbar" id="navbar">
+    <a href="#home" class="brand magnet">
+      <img src="assets/ivory-logo.png" alt="Ivory">
+      <div><b>IVORY</b><small>CFW ROLEPLAY</small></div>
+    </a>
+    <button class="hamburger magnet" id="hamburger" aria-label="القائمة"><span></span><span></span><span></span></button>
+    <nav id="navlinks">
+      <a href="#home">الرئيسية</a>
+      <a href="#about">عن المدينة</a>
+      <a href="rules.html" class="panel-link">القوانين</a>
+      <a href="#jobs">الوظائف</a>
+      <a href="#apply">التقديم</a>
+      <a href="store.html" class="panel-link">المتجر</a>
+      <a class="discord-link" href="#discord">الديسكورد</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero-pro" id="home">
+      <div class="hero-video-layer" aria-hidden="true">
+        <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/ivory-logo.png">
+          <source src="assets/video/hero-gta-bg.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video-fallback"></div>
+      </div>
+      <div class="hero-lines"></div>
+      <div class="hero-frame tilt-hero reveal">
+        <div class="hero-copy">
+          <div class="status-pill"><span></span> Premium Arab FiveM Roleplay</div>
+          <div class="coded-title-wrap" id="ivoryTitleFx" aria-label="IVORY CFW Roleplay">
+            <svg class="orbit-svg" viewBox="0 0 900 270" aria-hidden="true">
+              <ellipse class="orbit orbit-main" cx="450" cy="118" rx="390" ry="74"></ellipse>
+              <ellipse class="orbit orbit-dash" cx="450" cy="118" rx="380" ry="65"></ellipse>
+              <circle class="orbit-dot dot-1" cx="80" cy="118" r="7"></circle>
+              <circle class="orbit-dot dot-2" cx="820" cy="118" r="7"></circle>
+            </svg>
+            <h1 class="coded-ivory" data-text="IVORY"><span>IVORY</span></h1>
+            <h2 class="coded-subtitle">CFW ROLEPLAY</h2>
+          </div>
+          <p>مدينة مصممة لتجربة رول بلاي منظمة، سيناريوهات قوية، إدارة نشطة، وهوية بصرية فخمة تليق بمجتمع احترافي.</p>
+          <div class="actions">
+            <a class="btn btn-primary magnet" href="#apply">ابدأ التقديم</a>
+            <a class="btn btn-secondary magnet discord-link" href="#discord">انضم للديسكورد</a>
+            <a class="btn btn-ghost magnet panel-link" href="rules.html">دخول بانل القوانين</a>
+          </div>
+          <div class="quick-stats">
+            <div><b data-count="128">0</b><small>Players Online</small></div>
+            <div><b data-count="24">0</b><small>Support Hours</small></div>
+            <div><b data-count="18">0</b><small>City Jobs</small></div>
+          </div>
+        </div>
+        <aside class="hero-side-card">
+          <span class="whitelist-badge">Whitelist Open</span>
+          <div class="side-logo-orbit"></div>
+          <img src="assets/ivory-logo.png" alt="Ivory CFW Logo">
+        </aside>
+      </div>
+      <a href="#community" class="scroll-indicator">اسحب للأسفل</a>
+    </section>
+
+    <section class="section community-board" id="community">
+      <div class="section-title reveal"><span>Ivory Community</span><h2>الإدارة وصناع المحتوى</h2><p>الإدارة الأساسية والستريمرز في مكان واحد تحت الهوم مباشرة بشكل منظم وقابل للتعديل.</p></div>
+      <div class="community-layout reveal">
+        <div class="community-panel">
+          <div class="panel-head"><span>Management</span><h3>إدارة المدينة</h3></div>
+          <div class="team-grid staff-list" id="staffGrid"></div>
+        </div>
+        <div class="community-panel creators-side">
+          <div class="panel-head"><span>Creators</span><h3>الستريمرز وصناع المحتوى</h3></div>
+          <div class="creators-compact" id="creatorsGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-title reveal"><span>About Ivory</span><h2>عن المدينة</h2><p>Ivory CFW مبنية لتقديم تجربة واقعية، عادلة، وفخمة لكل لاعب يحب صناعة القصص.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card reveal tilt"><i>01</i><h3>نظام واقعي</h3><p>اقتصاد، وظائف، قوانين، وسيناريوهات تساعد اللاعب يعيش دور كامل داخل المدينة.</p></article>
+        <article class="feature-card reveal tilt"><i>02</i><h3>إدارة احترافية</h3><p>فريق منظم يتابع التذاكر والتقديمات والبلاغات لضمان تجربة عادلة للجميع.</p></article>
+        <article class="feature-card reveal tilt"><i>03</i><h3>مجتمع قوي</h3><p>بيئة مناسبة للاعبين الجدد والمحترفين مع فعاليات وتحديثات مستمرة.</p></article>
+      </div>
+    </section>
+
+    <section class="section split-section" id="rules-preview">
+      <div class="section-title reveal"><span>City Rules</span><h2>القوانين</h2><p>تم نقل القوانين إلى بانل مستقلة أكثر تنظيمًا.</p><a class="mini-btn magnet" href="rules.html" class="panel-link">افتح بانل القوانين</a></div>
+      <div class="rules-wrap reveal">
+        <div class="rule active"><b>01</b><div><h3>احترام الرول بلاي</h3><p>ممنوع الخروج عن الشخصية أو تخريب السيناريوهات بدون سبب منطقي.</p></div></div>
+        <div class="rule"><b>02</b><div><h3>احترام اللاعبين</h3><p>التعامل يكون باحترام كامل داخل وخارج المدينة، وأي إساءة يتم التعامل معها إداريًا.</p></div></div>
+        <div class="rule"><b>03</b><div><h3>الالتزام بالتقديم</h3><p>التفعيل والتقديمات الرسمية تتم من خلال النماذج والديسكورد فقط.</p></div></div>
+        <div class="rule"><b>04</b><div><h3>اللعب النظيف</h3><p>ممنوع استغلال الثغرات أو البرامج الخارجية أو أي أسلوب يضر بالتوازن.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="jobs">
+      <div class="section-title reveal"><span>Careers</span><h2>الوظائف</h2><p>اختار مسارك داخل المدينة وابدأ قصتك.</p></div>
+      <div class="job-grid reveal">
+        <div class="job magnet">🚓 الشرطة</div><div class="job magnet">🚑 الإسعاف</div><div class="job magnet">⚖️ العدل</div>
+        <div class="job magnet">🔧 الميكانيكي</div><div class="job magnet">🏪 الأعمال</div><div class="job magnet">🎭 العصابات</div>
+      </div>
+    </section>
+
+    <section class="section apply-shell apply-discord" id="apply">
+      <div class="apply-copy reveal">
+        <span>Whitelist</span><h2>التقديم</h2><p>التقديم الرسمي في Ivory يتم من خلال الديسكورد فقط عشان كل الطلبات والتذاكر تبقى منظمة وواضحة.</p>
+        <ul><li>افتح تذكرة من الديسكورد</li><li>اختار نوع التقديم</li><li>انتظر رد فريق التفعيل</li></ul>
+      </div>
+      <div class="discord-apply-card reveal">
+        <img src="assets/ivory-logo.png" alt="Ivory">
+        <h3>Apply Via Discord</h3>
+        <p>اضغط الزر وهيتم تحويلك للديسكورد الرسمي. غير رابط الديسكورد من ملف <b>assets/data/site-config.js</b>.</p>
+        <a class="btn btn-primary magnet discord-link" href="https://discord.gg/ivoryrp" target="_blank" rel="noopener">التقديم من الديسكورد</a>
+        <div class="discord-link-note">لا يوجد فورم داخل الموقع — كل التقديمات عبر الديسكورد.</div>
+      </div>
+    </section>
+
+    <section class="section" id="store">
+      <div class="section-title reveal"><span>Premium Store</span><h2>المتجر</h2><p>بانل متجر مستقلة للعربيات والورش والمطاعم مع صور وأسعار قابلة للتعديل بسهولة.</p><a class="mini-btn magnet panel-link" href="store.html">دخول بانل المتجر</a></div>
+      <div class="store-grid">
+        <article class="product reveal tilt"><small>Cars</small><h3>قسم العربيات</h3><p>صور، أسماء، أسعار، ومميزات لكل عربية.</p><b>Editable</b><a class="mini-btn panel-link" href="store.html#cars">افتح القسم</a></article>
+        <article class="product reveal tilt"><small>Workshops</small><h3>قسم الورش</h3><p>باقات ورش جاهزة للتعديل والبيع.</p><b>Premium</b><a class="mini-btn panel-link" href="store.html#workshops">افتح القسم</a></article>
+        <article class="product reveal tilt"><small>Restaurants</small><h3>قسم المطاعم</h3><p>مطاعم ومشاريع داخل المدينة بشكل احترافي.</p><b>Business</b><a class="mini-btn panel-link" href="store.html#restaurants">افتح القسم</a></article>
+      </div>
+    </section>
+
+    <section class="discord-section reveal" id="discord">
+      <img src="assets/ivory-logo.png" alt="Ivory">
+      <h2>انضم إلى مجتمع Ivory</h2>
+      <p>كل التقديمات، الدعم، الأخبار، والتحديثات موجودة داخل الديسكورد الرسمي.</p>
+      <a class="btn btn-primary magnet" href="https://discord.gg/ivoryrp" target="_blank" rel="noopener">دخول الديسكورد</a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Ivory CFW Roleplay</span>
+    <span>Designed for a premium FiveM experience</span>
+  </footer>
+  <script src="assets/data/site-config.js"></script>
+  <script src="assets/data/staff.js"></script>
+  <script src="assets/data/creators.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ivory CFW Editor</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#020402;color:#f8ffe8;font-family:Tajawal,Arial;padding:30px}*{box-sizing:border-box}.wrap{max-width:1100px;margin:auto}.card{border:1px solid rgba(202,255,55,.25);background:rgba(8,16,7,.75);border-radius:24px;padding:22px;margin:14px 0}h1,h2{margin:0 0 12px;color:#caff37}input,textarea,select{width:100%;padding:13px;border-radius:14px;border:1px solid rgba(202,255,55,.25);background:#071005;color:#fff;margin:7px 0;font-family:inherit}button{border:0;border-radius:14px;background:#caff37;color:#071005;font-weight:900;padding:13px 20px;cursor:pointer;margin:5px}textarea{min-height:180px;direction:ltr}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}@media(max-width:800px){.grid{grid-template-columns:1fr}}</style>
+</head>
+<body><div class="wrap">
+<h1>Ivory CFW Open Source Editor</h1>
+<p>الأداة دي تساعدك تعدل المنتجات وتطلع كود جاهز تحطه في <b>products.js</b>. التعديل لا يحفظ تلقائيًا على الجهاز، انسخ الناتج واستبدل الملف.</p>
+<div class="card"><h2>إضافة / تعديل منتج</h2><div class="grid"><input id="name" placeholder="اسم المنتج"><input id="price" placeholder="السعر"><select id="category"><option value="cars">العربيات</option><option value="workshops">الورش</option><option value="restaurants">المطاعم</option></select><input id="image" placeholder="مسار الصورة مثال assets/store/car.png"></div><input id="desc" placeholder="وصف المنتج"><button onclick="addProduct()">إضافة منتج</button><button onclick="exportProducts()">تصدير products.js</button></div>
+<div class="card"><h2>المنتجات الحالية</h2><div id="list"></div></div>
+<div class="card"><h2>انسخ الكود وضعه في products.js</h2><textarea id="out"></textarea></div>
+</div><script src="products.js"></script><script>
+let items = JSON.parse(JSON.stringify(window.STORE_PRODUCTS || []));
+function render(){list.innerHTML=items.map((p,i)=>`<div class="card"><b>${p.name}</b> - ${p.price}<br>${p.category}<br><small>${p.image}</small><br><button onclick="del(${i})">حذف</button></div>`).join('')||'لا توجد منتجات';}
+function addProduct(){items.push({category:category.value,name:name.value||'منتج جديد',price:price.value||'0 EGP',image:image.value||'assets/store/car-1.svg',desc:desc.value||'وصف المنتج'});render();exportProducts();}
+function del(i){items.splice(i,1);render();exportProducts();}
+function exportProducts(){out.value='/* عدّل المنتجات من هنا */\nconst STORE_PRODUCTS = '+JSON.stringify(items,null,2)+';';}
+render();exportProducts();
+</script></body></html>

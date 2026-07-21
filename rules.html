@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>قوانين Ivory CFW | Rules Panel</title>
+  <meta name="description" content="بانل قوانين Ivory CFW Roleplay بشكل احترافي ومنظم.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="rules-page">
+  <div id="preloader" class="preloader">
+    <div class="preloader-orbit"></div>
+    <img src="assets/ivory-logo.png" alt="Ivory Logo">
+    <span>LOADING RULES</span>
+  </div>
+  <div id="pageTransition" class="page-transition">
+    <div class="preloader-orbit"></div>
+    <img src="assets/ivory-logo.png" alt="Ivory">
+    <span>IVORY CFW</span>
+  </div>
+
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div id="progress" class="progress"></div>
+  <canvas id="fx"></canvas>
+  <div id="spotlight" class="spotlight"></div>
+  <div class="grain"></div>
+
+  <header class="navbar scrolled" id="navbar">
+    <a href="index.html#home" class="brand magnet panel-link">
+      <img src="assets/ivory-logo.png" alt="Ivory">
+      <div><b>IVORY</b><small>RULES PANEL</small></div>
+    </a>
+    <button class="hamburger magnet" id="hamburger" aria-label="القائمة"><span></span><span></span><span></span></button>
+    <nav id="navlinks">
+      <a href="index.html#home" class="panel-link">الرئيسية</a>
+      <a href="index.html#about" class="panel-link">عن المدينة</a>
+      <a class="active panel-link" href="rules.html">القوانين</a>
+      <a href="index.html#jobs" class="panel-link">الوظائف</a>
+      <a href="index.html#apply">التقديم</a>
+      <a href="store.html" class="panel-link">المتجر</a>
+      <a class="discord-link" href="index.html#discord">الديسكورد</a>
+    </nav>
+  </header>
+
+  <main class="rules-panel-page">
+    <section class="rules-hero reveal show">
+      <div>
+        <span class="status-pill"><span></span> Ivory CFW Official Rules</span>
+        <h1>بانل القوانين</h1>
+        <p>كل قوانين المدينة متقسمة بشكل واضح علشان اللاعب يعرف المسموح والممنوع قبل دخول السيرفر.</p>
+        <div class="actions">
+          <a class="btn btn-primary magnet panel-link" href="index.html#apply">قدّم الآن</a>
+          <a class="btn btn-secondary magnet panel-link" href="index.html">رجوع للموقع</a>
+        </div>
+      </div>
+      <div class="rules-logo-card tilt"><img src="assets/ivory-logo.png" alt="Ivory"></div>
+    </section>
+
+    <section class="rules-dashboard reveal show">
+      <aside class="rules-sidebar">
+        <button class="rule-tab active magnet" data-tab="general">القوانين العامة</button>
+        <button class="rule-tab magnet" data-tab="rp">قوانين الرول بلاي</button>
+        <button class="rule-tab magnet" data-tab="crime">الجرائم والعصابات</button>
+        <button class="rule-tab magnet" data-tab="jobs">الوظائف الحكومية</button>
+        <button class="rule-tab magnet" data-tab="punish">العقوبات</button>
+      </aside>
+
+      <div class="rules-content">
+        <div class="rule-panel active" id="general">
+          <h2>القوانين العامة</h2>
+          <div class="rule-list">
+            <article><b>01</b><div><h3>الاحترام إلزامي</h3><p>ممنوع السب، العنصرية، الاستهزاء، أو أي تصرف يقلل من اللاعبين أو الإدارة.</p></div></article>
+            <article><b>02</b><div><h3>عدم التخريب</h3><p>أي محاولة لإفساد تجربة اللاعبين أو تعطيل السيناريوهات تعتبر مخالفة مباشرة.</p></div></article>
+            <article><b>03</b><div><h3>اتباع قرارات الإدارة</h3><p>قرارات الإدارة داخل السيناريو أو أثناء التحقيق الإداري واجبة التنفيذ.</p></div></article>
+          </div>
+        </div>
+
+        <div class="rule-panel" id="rp">
+          <h2>قوانين الرول بلاي</h2>
+          <div class="rule-list">
+            <article><b>01</b><div><h3>تقمص الشخصية</h3><p>لازم تلتزم بشخصيتك ولا تخرج عنها أثناء اللعب أو السيناريو.</p></div></article>
+            <article><b>02</b><div><h3>الخوف على الحياة</h3><p>لازم تتصرف بشكل واقعي عند وجود تهديد مباشر لحياتك.</p></div></article>
+            <article><b>03</b><div><h3>منع الميتا جيمنج</h3><p>ممنوع استخدام معلومات من خارج اللعبة داخل السيناريو.</p></div></article>
+          </div>
+        </div>
+
+        <div class="rule-panel" id="crime">
+          <h2>الجرائم والعصابات</h2>
+          <div class="rule-list">
+            <article><b>01</b><div><h3>سبب منطقي</h3><p>أي خطف، تهديد، أو اشتباك لازم يكون له سبب واضح داخل الرول بلاي.</p></div></article>
+            <article><b>02</b><div><h3>منع القتل العشوائي</h3><p>ممنوع قتل لاعب بدون سيناريو أو بدون تصعيد منطقي.</p></div></article>
+            <article><b>03</b><div><h3>احترام حدود السيناريو</h3><p>لا تستخدم الجريمة لتخريب اللعب أو تعطيل الآخرين بدون هدف واضح.</p></div></article>
+          </div>
+        </div>
+
+        <div class="rule-panel" id="jobs">
+          <h2>الوظائف الحكومية</h2>
+          <div class="rule-list">
+            <article><b>01</b><div><h3>الالتزام بالرتبة</h3><p>كل موظف يلتزم بمهام رتبته ولا يتجاوز صلاحياته.</p></div></article>
+            <article><b>02</b><div><h3>الحيادية</h3><p>ممنوع استغلال الوظيفة لمصلحة شخصية أو لمساعدة الأصدقاء خارج النظام.</p></div></article>
+            <article><b>03</b><div><h3>التواصل الرسمي</h3><p>البلاغات والتحقيقات تتم من خلال القنوات الرسمية فقط.</p></div></article>
+          </div>
+        </div>
+
+        <div class="rule-panel" id="punish">
+          <h2>العقوبات</h2>
+          <div class="rule-list">
+            <article><b>01</b><div><h3>تنبيه</h3><p>للمخالفات البسيطة أو أول مخالفة حسب تقدير الإدارة.</p></div></article>
+            <article><b>02</b><div><h3>سجن / حظر مؤقت</h3><p>للمخالفات المتوسطة أو تكرار نفس الخطأ.</p></div></article>
+            <article><b>03</b><div><h3>حظر دائم</h3><p>للغش، التخريب المتعمد، أو الإساءة الشديدة للمجتمع.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Ivory CFW Roleplay</span>
+    <span>Rules Panel Version</span>
+  </footer>
+  <script src="assets/data/site-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

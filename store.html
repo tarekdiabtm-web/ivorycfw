@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ivory CFW | Store Panel</title>
+  <meta name="description" content="بانل متجر Ivory CFW - عربيات، ورش، مطاعم.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="rules-page store-page">
+  <div id="preloader" class="preloader">
+    <div class="preloader-orbit"></div>
+    <img src="assets/ivory-logo.png" alt="Ivory Logo">
+    <span>LOADING STORE</span>
+  </div>
+  <div id="pageTransition" class="page-transition">
+    <div class="preloader-orbit"></div>
+    <img src="assets/ivory-logo.png" alt="Ivory">
+    <span>IVORY CFW</span>
+  </div>
+  <div class="cursor-dot" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div><div id="progress" class="progress"></div><canvas id="fx"></canvas><div id="spotlight" class="spotlight"></div><div class="grain"></div>
+
+  <header class="navbar" id="navbar">
+    <a href="index.html" class="brand magnet panel-link"><img src="assets/ivory-logo.png" alt="Ivory"><div><b>IVORY</b><small>STORE PANEL</small></div></a>
+    <button class="hamburger magnet" id="hamburger" aria-label="القائمة"><span></span><span></span><span></span></button>
+    <nav id="navlinks">
+      <a href="index.html" class="panel-link">الرئيسية</a>
+      <a href="rules.html" class="panel-link">القوانين</a>
+      <a href="#cars">العربيات</a>
+      <a href="#workshops">الورش</a>
+      <a href="#restaurants">المطاعم</a>
+      <a class="discord-link" href="https://discord.gg/ivory" target="_blank" rel="noopener">الديسكورد</a>
+    </nav>
+  </header>
+
+  <main class="rules-panel-page store-panel-page">
+    <section class="rules-hero store-hero reveal">
+      <div>
+        <span class="status-pill"><span></span> Editable Premium Store</span>
+        <h1>STORE</h1>
+        <p>بانل متجر منفصلة باحترافية: عربيات، ورش، مطاعم. تقدر تغير الصور والأسماء والأسعار من ملف <b>products.js</b> بسهولة بدون تعديل التصميم.</p>
+        <div class="actions"><a class="btn btn-primary magnet" href="#cars">تصفح المنتجات</a><a class="btn btn-ghost magnet" href="index.html">رجوع للموقع</a></div>
+      </div>
+      <div class="rules-logo-card"><img src="assets/ivory-logo.png" alt="Ivory"></div>
+    </section>
+
+    <section class="donation-pro reveal">
+      <div><span>Support Ivory</span><h2>الدونيت / الدعم</h2><p>قسم دعم احترافي واضح ومنظم. كل عملية شراء تتم عبر الديسكورد حسب قوانين المدينة، مع توضيح أن المنتجات لا تكسر توازن الرول بلاي.</p></div>
+      <div class="donation-steps">
+        <article><b>01</b><h3>اختار المنتج</h3><p>من العربيات أو الورش أو المطاعم.</p></article>
+        <article><b>02</b><h3>افتح تذكرة</h3><p>اضغط اطلب الآن للدخول للديسكورد.</p></article>
+        <article><b>03</b><h3>تأكيد الإدارة</h3><p>يتم التسليم حسب النظام الرسمي.</p></article>
+      </div>
+    </section>
+
+    <section class="store-tabs reveal">
+      <button class="store-tab active magnet" data-filter="all">الكل</button>
+      <button class="store-tab magnet" data-filter="cars">العربيات</button>
+      <button class="store-tab magnet" data-filter="workshops">الورش</button>
+      <button class="store-tab magnet" data-filter="restaurants">المطاعم</button>
+    </section>
+
+    <section class="store-category reveal" id="cars"><div class="section-title"><span>Cars</span><h2>العربيات</h2><p>صور وأسامي وأسعار قابلة للتعديل.</p></div><div class="premium-products" data-category="cars"></div></section>
+    <section class="store-category reveal" id="workshops"><div class="section-title"><span>Workshops</span><h2>الورش</h2><p>مشاريع ميكانيكي وورش جاهزة.</p></div><div class="premium-products" data-category="workshops"></div></section>
+    <section class="store-category reveal" id="restaurants"><div class="section-title"><span>Restaurants</span><h2>المطاعم</h2><p>مطاعم وكافيهات ببراندات قابلة للتعديل.</p></div><div class="premium-products" data-category="restaurants"></div></section>
+  </main>
+  <footer><span>© 2026 Ivory CFW Store</span><span>Editable products in products.js</span></footer>
+  <script src="assets/data/site-config.js"></script>
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
